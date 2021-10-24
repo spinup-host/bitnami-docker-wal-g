@@ -19,6 +19,7 @@ ENV BITNAMI_APP_NAME="wal-g" \
     BITNAMI_IMAGE_VERSION="1.1.0-debian-10-r42" \
     PATH="/opt/bitnami/wal-g/bin:$PATH"
 
-USER 1001
+USER root
+
 ENTRYPOINT [ "wal-g" ]
-CMD [ "--help" ]
+CMD [ "backup-push" ]
